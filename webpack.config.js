@@ -1,23 +1,37 @@
 var webpack = require('webpack')
 var path = require('path')
 
-var DIR = './app/src/client/main.js'
+var SERVER_DIR = path.resolve(__dirname, 'app', 'src', 'server', 'server')
 
-var config = {
-	entry: DIR,
-	output: { path: __dirname, filename: 'bundle.js' },
-	module: {
-	  loaders: [
-	    {
-        test: /.jsx?$/,
-        loader: 'babel-loader',
-        exclude: /node_modules/,
-        query: {
-          presets: ['es2015', 'react']
-        }
-      }
-	  ]
+var config = [
+	{
+		target: 'node',
+		entry: SERVER_DIR,
+		output: {
+        path: './dist',
+        filename: 'server.bundle.js',
+        libraryTarget: 'commonjs',
+    },
+		module: {
+		  loaders: [
+		    {
+	        test: /.jsx?$/,
+	        loader: 'babel-loader',
+	        query: {
+	          presets: ['es2015', 'react']
+	        }
+	      }
+		  ]
+		},
+		externals: [
+	    /^[a-z\-0-9]+$/, {
+	      'react-dom/server': true
+	    }
+		],
+    resolve: {
+      extensions: ['', '.js', '.jsx']
+    }
 	}
-}
+]
 
 module.exports = config

@@ -1,10 +1,10 @@
-var express = require("express")
-// var path = require("path")
+import express from 'express'
+import router from './router'
 
-var app = express()
+const app = express()
 
-app.use(express.static("./"))
+app.use("/*", router)
 
 app.listen(3000,function(){
-    console.log("🌎  Started listening on port", 3000)
+  console.log("\n🌎  Started listening on port", 3000)
 })
