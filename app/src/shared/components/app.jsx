@@ -4,7 +4,7 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        I'm an app container      
+        HOT RELOADING BABY      
         {this.props.children}
       </div>
     )

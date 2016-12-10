@@ -1,12 +1,12 @@
 var webpack = require('webpack')
 var path = require('path')
 
-var SERVER_DIR = path.resolve(__dirname, 'app', 'src', 'server', 'server')
+var entry = path.resolve(__dirname, 'app', 'src', 'server', 'server')
 
 var config = [
 	{
 		target: 'node',
-		entry: SERVER_DIR,
+		entry: entry,
 		output: {
         path: './dist',
         filename: 'server.bundle.js',
@@ -16,7 +16,7 @@ var config = [
 		  loaders: [
 		    {
 	        test: /.jsx?$/,
-	        loader: 'babel-loader',
+	        loader: 'babel',
 	        query: {
 	          presets: ['es2015', 'react']
 	        }
