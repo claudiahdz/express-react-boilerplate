@@ -1,7 +1,13 @@
 import express from 'express'
+import enforceSSL from 'express-enforces-ssl'
+
 import router from './router'
 
 const app = express()
+
+// Enforce HTTPS
+app.enable('trust proxy')
+app.use(enforceSSL())
 
 app.use("/*", router)
 
