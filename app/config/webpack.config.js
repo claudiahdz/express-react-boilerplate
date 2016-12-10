@@ -1,7 +1,7 @@
 var webpack = require('webpack')
 var path = require('path')
 
-var entry = path.resolve(__dirname, 'app', 'src', 'server', 'server')
+var entry = path.resolve(__dirname, '..', 'src', 'server', 'server')
 
 var config = [
 	{

@@ -1,7 +1,7 @@
 import webpack from 'webpack'
 import express from 'express'
-import router from './router'
-import config from '../../../webpack.config.dev'
+import router from '../../src/server/router'
+import config from '../../config/webpack.config.dev'
 
 import webpackDevMiddleware from 'webpack-dev-middleware'
 import webpackHotMiddleware  from 'webpack-hot-middleware'
@@ -25,5 +25,5 @@ app.use(webpackHotMiddleware (compiler, {
 app.use("/*", router)
 
 app.listen(3000,function(){
-  console.log("\n🌎  Started listening on port", 3000)
+  console.log("\n🌎  Started listening on port 3000\n")
 })

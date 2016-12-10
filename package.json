@@ -1,14 +1,14 @@
 {
-  "name": "universal-app",
+  "name": "express-react-boilerplate",
   "version": "1.0.0",
-  "description": "Just an app to learn and have fun.",
-  "main": "index.js",
+  "description": "Simple boilerplate for server-side rendering with Express & React.",
+  "main": "app/src/server/server.js",
   "scripts": {
     "start": "node dist/server.bundle.js",
     "build": "webpack --colors",
     "clean": "rimraf ./dist",
-    "prod": "npm run clean && webpack --colors && node dist/server.bundle.js",
-    "dev": "npm run clean && babel-node app/src/server/server_dev.js"
+    "prod": "npm run clean && babel-node app/bin/bundler/prod.js && node dist/server.bundle.js",
+    "dev": "npm run clean && babel-node app/bin/server/server_dev.js"
   },
   "author": "Claudia Hernández",
   "license": "ISC",
@@ -26,6 +26,7 @@
   },
   "dependencies": {
     "express": "^4.14.0",
+    "express-enforces-ssl": "^1.1.0",
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
     "react-router": "^3.0.0"

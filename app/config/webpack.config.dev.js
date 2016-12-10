@@ -1,11 +1,10 @@
 var webpack = require('webpack')
 var path = require('path')
 
-var entry = path.resolve(__dirname, 'app', 'src', 'client', 'client')
+var entry = path.resolve(__dirname, '..', 'src', 'client', 'client')
 
 var config = {
   target: 'web',
-  devtool: 'cheap-module-eval-source-map',
   entry: [
     'webpack-hot-middleware/client',
     entry
