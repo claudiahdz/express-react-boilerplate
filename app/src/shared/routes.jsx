@@ -2,7 +2,7 @@ import React from 'react'
 import { Route, IndexRoute, Router, browserHistory } from 'react-router'
 
 import AppContainer from './components/app'
-import Home from './components/home'
+import Home from './components/home/home'
 import Dummy from './components/dummy'
 
 export default (

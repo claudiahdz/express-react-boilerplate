@@ -34,10 +34,11 @@ function renderFullPage(html) {
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title>Hello Server Side Rendering</title>
+        <link rel="stylesheet" href="/static/styles.css">
     </head>
     <body>
         <div id="root"><div>${html}</div></div>
-        <script src="dist/bundle.js"></script>
+        <script src="/static/bundle.js"></script>
     </body>
     </html>
     `

@@ -1,7 +1,8 @@
 import webpack from 'webpack'
 import express from 'express'
+import path from 'path'
 import router from '../../src/server/router'
-import config from '../../config/webpack.config.dev'
+import config from '../../config/webpack.dev.client'
 
 import webpackDevMiddleware from 'webpack-dev-middleware'
 import webpackHotMiddleware  from 'webpack-hot-middleware'
@@ -22,6 +23,7 @@ app.use(webpackHotMiddleware (compiler, {
   log: console.log
 }))
 
+app.use('/static', express.static('./static'));
 app.use("/*", router)
 
 app.listen(3000,function(){
