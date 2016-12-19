@@ -4,7 +4,8 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        HOT RELOADING BABY      
+        YAAAS YASS QUEEN
+        Very hacky ...
         {this.props.children}
       </div>
     )

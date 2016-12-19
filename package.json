@@ -25,8 +25,7 @@
     "style-loader": "^0.13.1",
     "webpack": "^1.13.3",
     "webpack-dev-middleware": "^1.8.4",
-    "webpack-hot-middleware": "^2.13.2",
-    "webpack-node-externals": "^1.5.4"
+    "webpack-hot-middleware": "^2.13.2"
   },
   "dependencies": {
     "express": "^4.14.0",

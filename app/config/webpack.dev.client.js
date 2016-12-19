@@ -10,6 +10,8 @@ const config = {
   name: 'client',
   target: 'web',
   entry: [
+    'react-hot-loader/patch',
+    'webpack/hot/only-dev-server',
     'webpack-hot-middleware/client',
     './app/src/client/client.js',
   ],  
@@ -32,7 +34,9 @@ const config = {
     ],
   },
   plugins: [
+    new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin(),
+    new webpack.NoErrorsPlugin(),
     new ExtractTextPlugin('styles.css')],
   resolve: {
     "root": __dirname,

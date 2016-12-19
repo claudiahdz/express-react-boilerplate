@@ -1,9 +1,12 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
-import {Router, browserHistory, match} from 'react-router'
-import routes from '../shared/routes'
+import { render } from 'react-dom'
+import App from './app'
 
-ReactDOM.render(
-  <Router routes={routes} history={browserHistory} />,
-  document.querySelector('#root')
+render(
+  <App/>,
+  document.getElementById('root')
 )
+
+if (module.hot) {
+  module.hot.accept();
+}

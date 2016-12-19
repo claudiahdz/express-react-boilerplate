@@ -6,8 +6,7 @@ export default class Home extends Component {
   render() {
     return (
       <div className={styles.home}>
-        Thi is the homepage! 
-        HOT RELODING IS WORKING YESSSSS
+        This is the home BABY... 🤔
       </div>
     )
   }
