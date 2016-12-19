@@ -1,9 +1,10 @@
-import React from 'react'
+import React, {Component} from 'react'
 import { Router, browserHistory } from 'react-router'
 import routes from '../shared/routes'
 
-const App = (props) => (
-  <Router key={Math.random()} routes={routes} history={browserHistory} />
-)
-
-export default App
+export default class App extends Component {
+  render() {
+      if (!this.routeConfig) this.routeConfig = routes
+      return <Router routes={this.routeConfig}  history={browserHistory} />
+  }
+}
